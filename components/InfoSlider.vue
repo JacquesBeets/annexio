@@ -14,11 +14,17 @@
             <h3 class="mb-2">ISO Code: <strong class="font-bold">{{country.cca3}}</strong></h3>
             <h3 class="mb-2">Population: <strong class="font-bold">{{country.population}}</strong></h3>
             <h3 class="">Currencies:</h3>
-            <div class="currency ml-4" v-for="(currency, currencyKey) in country.currencies" :key="currencyKey">
+            <div class="currency ml-4" 
+                v-for="(currency, currencyKey) in country.currencies" 
+                :key="currencyKey">
                 <strong class="font-bold">{{currency.symbol}} &bullet; {{currency.name}}</strong> 
             </div>
             <h3 class="mt-2">Languages:</h3>
-            <div class="currency ml-4" v-for="(lang, langKey) in country.languages" :key="langKey"><strong class="font-bold">{{lang}}</strong></div>
+            <div class="currency ml-4" 
+                v-for="(lang, langKey) in country.languages" 
+                :key="langKey">
+                    <strong class="font-bold">{{lang}}</strong>
+            </div>
         </div>
     </div>
 </template>
@@ -28,17 +34,6 @@ import Vue from 'vue'
 
 export default Vue.extend({
     name: 'InfoSlider',
-    props:["close", "country"],
-    data(){
-        return {
-
-        }
-    },
-    computed:{
-
-    },
-    methods:{
-
-    }
+    props:["close", "country"]
 })
 </script>

@@ -8,7 +8,12 @@
             <!-- Filter Select -->
             <select v-model="selectedRegion" id="countries" class="px-3 mr-3 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-800 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                 <option value="all">All Regions</option>
-                <option :value="regionKey" v-for="(region, regionKey) in regions" :key="regionKey">{{region}}</option>
+                <option 
+                    :value="regionKey" 
+                    v-for="(region, regionKey) in regions" 
+                    :key="regionKey">
+                        {{region}}
+                </option>
             </select>
 
             <!-- Search -->
@@ -33,7 +38,6 @@
 
 <script>
 import Vue from 'vue'
-
 
 export default Vue.extend({
     name: 'Header',

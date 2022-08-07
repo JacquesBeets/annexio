@@ -13,7 +13,10 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-    ]
+    ],
+    bodyAttrs: {
+      class: 'bg-gray-50 dark:bg-gray-900'
+    }
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -47,6 +50,15 @@ export default {
     manifest: {
       lang: 'en'
     }
+  },
+  loadingIndicator: {
+    name: 'circle',
+    color: '#555',
+    background: 'white'
+  },
+  loading: {
+    color: 'blue',
+    height: '5px'
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
