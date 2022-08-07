@@ -27,7 +27,7 @@ export default Vue.extend({
     },
     async fetch() {
         try {
-            // await this.$store.dispatch("fetchCountries") 
+            await this.$store.dispatch("fetchCountries") 
         }
         catch (error) {
             console.error(error);
