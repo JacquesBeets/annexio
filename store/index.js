@@ -1,4 +1,6 @@
 export const state = () => ({
+    selectedRegion: "all",
+    countrySearch:"",
     countries:[
       {
       name: {
@@ -49850,13 +49852,26 @@ export const state = () => ({
   
   export const getters = {
     getCounties(state) {
-      return state.countries
+      if(state.selectedRegion === "all") return state.countries
+      if(state.selectedRegion !== "all") return state.countries.filter(country => country.region == state.selectedRegion)
+    },
+    getRegions(state){
+      if(!state.countries) return []
+
+      let regionObj = {}
+      state.countries.forEach(country => {
+        regionObj[country.region] = country.region
+      })
+      return regionObj
     }
   }
   
   export const mutations = {
     setCountries(state, payload) {
       state.countries = payload
+    },
+    setSelectedRegion(state, payload){
+      state.selectedRegion = payload
     }
   }
   
