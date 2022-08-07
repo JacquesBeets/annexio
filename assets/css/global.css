@@ -2,6 +2,12 @@
     height: 100%;
 }
 
+.header{
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
 .flag{
     position: relative;
     height: 266px;
@@ -11,7 +17,6 @@
     background-repeat: no-repeat;
     overflow: hidden;
     cursor: pointer;
-    border-radius: 9px;
 }
 
 .flag h1{
@@ -26,4 +31,10 @@
 
 .flag h1 div{
     font-weight: 200;
+}
+
+/* Toggle  */
+input:checked ~ .dot {
+    transform: translateX(100%);
+    background-color: #48bb78;
 }

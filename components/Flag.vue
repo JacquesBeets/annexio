@@ -1,5 +1,5 @@
 <template>
-    <div class="flag mr-3 mb-5" :style="'background-image:url('+country.flags.svg+')'">
+    <div class="flag mr-3 mb-5" :style="backgroundFlag">
        <h1>
             {{country.name.official}}
             <div class="capitals" v-if="country.capital">{{country.capital[0]}}</div> 
@@ -7,14 +7,16 @@
     </div>
 </template>
 
-<script lang="ts">
+<script >
 import Vue from 'vue'
 
 export default Vue.extend({
     name: 'Flag',
     props:["country"],
     computed:{
-
+        backgroundFlag(){
+            return `background-image:url(${this.country.flags.svg})`
+        }
     }
 })
 </script>
